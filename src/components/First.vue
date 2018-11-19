@@ -1,18 +1,22 @@
 <template>
  <div id="bgo">
+   <div class="loading" @click="loading()" >loading...</div>
+   <!-- <router-link :to="{name:'index'}">loading...</router-link> -->
  </div>
 </template>
 
 <script>
  export default {
-   name:"First",
+   name:"first",
    data () {
      return {
 
      }
    },
-   components: {
-
+   methods: {
+     loading:function(){
+        this.$router.push("/index")
+     }
    }
  }
 </script>
@@ -22,11 +26,19 @@
      width: 100%;
     height: 100%;
     position: fixed;
-    background: url(/static/img/bg.40c72c6.jpg) no-repeat center;
+    background: url(../assets/bg.jpg) no-repeat center;
     background-size: 100% 100%;
     top: 0;
     margin: 0;
     padding: 0;
+}
+.loading{
+    position: absolute;
+    bottom: 30px;
+    left: 2.8rem;
+    height:1rem;
+    width: 2rem;
+    font-size :18px;
 }
  
 </style>
