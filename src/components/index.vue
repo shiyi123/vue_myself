@@ -54,6 +54,11 @@ export default {
   name: "index",
   components:{
       Footers,
+  },
+   data() {
+    return {
+      active: 0
+    }
   }
  
 };
